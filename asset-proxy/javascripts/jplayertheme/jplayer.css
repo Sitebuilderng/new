@@ -1,0 +1,237 @@
+#fulljPlayerVideo {
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index: 1000;
+}
+
+.jplayerThemePlayer.videoPlayerWrapper {
+	margin-bottom: 20px;
+	position:relative;
+	background:#333;
+	margin:0 auto;
+	overflow:hidden;
+}
+.jplayerThemePlayer.videoPlayerWrapper .jplayer {
+	position:absolute;
+	top:0;
+	left:0;
+	background: #000;
+}
+.jplayerThemePlayer.videoPlayerWrapper .videoplayer {
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	left:0px;
+	margin:0;
+	background:#000;
+	background:rgba(0,0,0,0.5);
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	transition:all 0.5s;
+}
+.jplayerThemePlayer.videoPlayerWrapper .videoplayer.hidden {
+	-moz-transform:translateY(48px);
+	-webkit-transform:translateY(48px);
+	transform:translateY(48px);
+}
+.jplayerThemePlayer .videoplayer {
+	margin-right:20px;
+	margin-bottom:20px;
+	padding-right:6px;
+}
+.jplayerThemePlayer .jp-full-screen
+,.jplayerThemePlayer .jp-restore-screen {
+	width:21px;
+	height:19px;
+	cursor: pointer;
+	background:url("full-screen-video.png?v=3");
+	background-size:21px 19px;
+	position: absolute;
+	bottom:15px;
+	right:43px;
+}
+.jplayerThemePlayer .jp-restore-screen {
+	display: none;
+}
+.jplayerThemePlayer.jp-video-full .jp-full-screen {
+	display: none;
+}
+.jplayerThemePlayer.jp-video-full .jp-restore-screen {
+	display: block;
+}
+.jplayerThemePlayer .jp-restore-screen {
+	background:url("full-screen-video-close.png?v=3");
+	background-size:21px 19px;
+}
+.jplayerThemePlayer .videoplayer .videoplayer_inner {
+	height:48px;
+	padding:1px;
+	position:relative;
+}
+.jplayerThemePlayer .videoplayer .jp-play 
+,.jplayerThemePlayer .videoplayer .jp-pause {
+	float:left;
+	width:25px;
+	height:25px;
+	cursor:pointer;
+	background:url("audio-player-slim-play.png?v=2");
+	background-size:25px 25px;
+	margin:10px 9px 0 11px;
+}
+.jplayerThemePlayer .hq {
+	position:absolute;
+	top:11px;
+	width:25px;
+	height:17px;
+	left:35px;
+	cursor:pointer;
+	background:url("hq.png") 2px 0 no-repeat;
+}
+.jplayerThemePlayer .hq.enabled {
+	background:url("hq.png") -21px 0 no-repeat;
+}
+.jplayerThemePlayer .jp-play-btn.large {
+	position:absolute;
+	top:0%;
+	left:0%;
+	right:0%;
+	bottom:0px;
+	cursor:pointer;
+	background: url("play-large.png?v=1") no-repeat 50% 50%;
+	background-size:105px 105px;
+	box-shadow:inset 0 0 100px rgba(0,0,0,0.5);
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	transition:all 0.5s;
+	opacity:1;
+}
+.jplayerThemePlayer .jp-play-btn.large.hidden {
+	opacity:0;
+}
+.jplayerThemePlayer .videoplayer .jp-pause {
+	background:url("audio-player-slim-pause.png?v=2");
+	background-size:25px 25px;
+}
+.jplayerThemePlayer .videoplayer .jp-progress {
+	position:absolute;
+	bottom:19px;
+	right:60px;
+	left:55px;
+	height:11px;
+	border:1px solid #fff;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+.jplayerThemePlayer .volume {
+	width:23px;
+	height:20px;
+	background:url("volume.png?v=4") 0 0px no-repeat;
+	background-size:22px 62px;
+	position:absolute;
+	right:8px;
+	bottom:16px;
+	cursor:pointer;
+}
+.jplayerThemePlayer .volume.low
+{
+	background-position:0 0px;
+	background-size:22px 62px;
+}
+.jplayerThemePlayer .volume.med
+{
+	background-position:0 -21px;
+	background-size:22px 62px;	
+}
+.jplayerThemePlayer .volume.high
+{
+	background-position:0 -42px;
+	background-size:22px 62px;
+}
+.jplayerThemePlayer .videoplayer .jp-progress {
+	right:160px;
+}
+
+.jplayerThemePlayer .times {
+	margin-right:0;
+	position:absolute;
+	bottom:16px;
+	right:80px;
+	color:#fff;
+	font-size: 11px;
+	line-height:16px;
+	font-family:arial,sans-serif;
+}
+@media (max-width:600px) {
+	.jplayerThemePlayer .videoplayer .jp-progress {
+		right:50px;
+	}
+	.jplayerThemePlayer .times {
+		display:none;
+	}
+}
+.jplayerThemePlayer .jp-seek-bar {
+	height:100%;
+	position:relative;
+	width:0;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+.jplayerThemePlayer .jp-play-bar {
+	height:100%;
+	width:0;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	position:relative;
+	background:#ccc;
+}
+.jplayerThemePlayer .jp-seek-bar .handle {
+	width:17px;
+	height:17px;
+	background:#ccc;
+	border:1px solid #fff;
+	position:absolute;
+	top:-4px;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	margin:0 -5px;
+	left:0px;
+	cursor:pointer;
+}
+
+div.jp-video-full.videoPlayerWrapper {
+	/* Rules for IE6 (full-screen) */
+	width:480px;
+	height:270px;
+	/* Rules for IE7 (full-screen) - Otherwise the relative container causes other page items that are not position:static (default) to appear over the video/gui. */
+	position:static !important; position:relative
+}
+
+
+div.jp-video-full div.jplayer {
+	top: 0;
+	left: 0;
+	position: fixed !important; position: relative; /* Rules for IE6 (full-screen) */
+	overflow: hidden;
+}
+
+div.jp-video-full div.jp-gui {
+	position: fixed !important; position: static; /* Rules for IE6 (full-screen) */
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	z-index:1001; /* 1 layer above the others. */
+}
+
+div.jp-video-full div.jp-interface {
+	position: absolute !important; position: relative; /* Rules for IE6 (full-screen) */
+	bottom: 0;
+	left: 0;
+}

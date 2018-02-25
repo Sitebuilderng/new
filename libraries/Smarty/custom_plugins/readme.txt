@@ -1,0 +1,1 @@
+Use this folder for any custom Smarty plugins. That way you don't need to worry about merging the main plugins folder when you update SetSeed.

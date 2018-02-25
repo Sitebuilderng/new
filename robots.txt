@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /actions/
+Disallow: /install/
+Disallow: /admin/
+Disallow: /livechat/
+Disallow: /sh/

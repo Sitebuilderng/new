@@ -1,0 +1,345 @@
+.social-links.align-left .social-link {
+	margin-right:8px;
+}
+.social-links.align-right .social-link {
+	margin-left:0px;
+}
+.social-links.align-right > div {
+	float:right;
+}
+.social-links.align-center .social-link,.social-links.align-center #livechat {
+	margin-right:8px;
+}
+.social-links.align-center .social-link:last-child,.social-links.align-center #livechat:last-child {
+	margin-right:0;
+}
+.social-links.align-justify .social-link,.social-links.align-justify #livechat {
+	margin:0 4px;
+}
+.social-links.align-justify .social-link:first-child,.social-links.align-justify #livechat:first-child {
+	margin-left:0;
+}
+.social-links.align-justify .social-link:last-child,.social-links.align-justify #livechat:last-child {
+	margin-right:0;
+}
+.social-links #livechat {
+	float:left;
+}
+.style-icons.social-links .social-link {
+	width:20px;
+	padding-left:20px;
+	height:20px;
+	overflow:hidden;
+}
+.style-text.social-links .social-link {
+	padding-left:0;
+	padding-top:0;
+	padding-bottom:0;
+}
+.style-text.social-links .social-link:before {
+	display:none;
+}
+.social-links .social-link {
+	margin-right:10px;
+	position:relative;
+	float:left;
+	padding-left:25px;
+}
+.style-icons.social-links .social-link:before {
+	font-size: 16px;
+	line-height:16px;
+}
+.social-links .social-link:before {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "icomoon";
+	position:absolute;
+	top:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	left:0px;
+	text-align:center;
+	width:20px;
+}
+
+
+
+/* NORMAL */
+.social-links.style-icons .social-link:before {
+	padding-top:4px;
+	padding-bottom:4px;
+	width:100%;
+}
+/*  NORMAL TWEAKS */
+.social-links .social-link.social-link-livechat:before {
+	content:"C";
+}
+.social-links.style-icons .social-link.social-link-livechat:before {
+	color:#fff;
+	background:#3fd7a6;
+	font-size:12px;
+	top:-2px;	
+}
+
+.social-links .social-link.social-link-email:before {
+	content:"E";
+
+}
+.style-icons.social-links .social-link.social-link-email:before {
+	background:#696669;
+		top:-2px;
+	color:#fff;
+}
+.social-links .social-link.social-link-facebook:before {
+	content:"f";
+
+}
+.style-icons.social-links .social-link.social-link-facebook:before {
+	background:#3b5998;
+	top:-3px;
+	color:#fff;
+}
+.social-links .social-link.social-link-googleplus:before {
+	content:"g";
+
+}
+.style-icons.social-links .social-link.social-link-googleplus:before {
+	background:#dd4b39;
+	color:#fff;
+	top:-1px;	
+}
+.social-links .social-link.social-link-instagram:before {
+	content:"I";
+
+}
+.social-links .social-link.social-link-houzz:before {
+	content:"z";
+		top:-2px;	
+
+}
+.social-links .social-link.social-link-blogger:before {
+	top:-2px;
+	font-size:12px;
+	content:"B";
+
+}
+.style-icons.social-links .social-link.social-link-instagram:before {
+	background:#125688;
+	color:#fff;
+	top:-2px;
+}
+.style-icons.social-links .social-link.social-link-houzz:before {
+	background:#7AC143;
+	color:#fff;
+}
+.style-icons.social-links .social-link.social-link-blogger:before {
+	background:#F28C39;
+	color:#fff;
+}
+.social-links .social-link.social-link-twitter:before {
+	content:"w";
+
+}
+.style-icons.social-links .social-link.social-link-twitter:before {
+	background:#00aced;
+	color:#fff;
+	top:-2px;
+}
+.social-links .social-link.social-link-youtube:before {
+	content:"Y";
+}
+
+.style-icons.social-links .social-link.social-link-youtube:before {
+	background:#bb0000;
+	color:#fff;
+	top:-2px;
+}
+.social-links .social-link.social-link-vimeo:before {
+	content:"v";
+}
+.style-icons.social-links .social-link.social-link-vimeo:before {
+	background:#aad450;
+	color:#fff;
+	top:-1px;
+}
+.social-links .social-link.social-link-flikr:before {
+	content:"F";
+}
+.style-icons.social-links .social-link.social-link-flikr:before {
+	background:#ff0084;
+	color:#fff;
+	top:-1px;
+}
+.social-links .social-link.social-link-tumblr:before {
+	content:"u";
+}
+.style-icons.social-links .social-link.social-link-tumblr:before {
+	background:#32506d;
+	color:#fff;
+	top:-1px;
+}
+.social-links .social-link.social-link-yelp:before {
+	content:"e";
+}
+.social-links .social-link.social-link-tripadvisor:before {
+	content:"A";
+	top:5px;
+	font-size:12px;
+}
+.style-icons.social-links .social-link.social-link-yelp:before {
+	background:#D32323;
+	color:#fff;
+	top:-1px;
+}
+.style-icons.social-links .social-link.social-link-tripadvisor:before {
+	background:#589442;
+	color:#fff;
+	top:-1px;
+}
+.social-links .social-link.social-link-linkedin:before {
+	content:"l";
+}
+.style-icons.social-links .social-link.social-link-linkedin:before {
+	background:#007bb5;
+	color:#fff;
+	top:-3px;
+}
+
+.social-links .social-link.social-link-pinterest:before {
+	content:"n";
+}
+
+.style-icons.social-links .social-link.social-link-pinterest:before {
+	background:#cb2027;
+	color:#fff;
+	font-size:13px;
+	top:-1px;
+}
+.style-icons.social-links .social-link.social-link-phone 
+,.style-icons.size-large.social-links .social-link.social-link-phone 
+{
+	width:auto;
+	background:#76707a;
+	color:#fff;
+	text-decoration:none;
+	font-size:13px;
+	line-height:19px;
+	padding-right:6px;
+}
+.style-text.social-links .social-link.social-link-phone {
+	background:none;
+}
+.social-links .social-link.social-link-phone:before {
+	background:transparent;
+	width:20px;
+	color:#fff;
+	content:"P";
+	font-size:13px;
+	top:-2px;
+}
+
+/* LARGE */
+
+.size-large.social-links .social-link {
+	padding-left:30px;
+}
+.size-large.social-links .social-link:before {
+	font-size:150%;
+	line-height:100%;
+	width:auto;
+}
+
+
+.social-links.size-large {
+	/*margin-top:8px;*/
+}
+.style-icons.size-large.social-links .social-link:before {
+	font-size: 26px;
+	line-height:18px;
+	top:0px;
+	padding-top:9px;
+	padding-bottom:9px;
+	left:0px;
+	width:35px;
+}
+.size-large.social-links .social-link.social-link-tripadvisor:before {
+	font-size:20px;
+}
+.style-icons.size-large.social-links.style-icons .social-link:before {
+	width:40px;
+	height:100%;
+}
+.style-icons.size-large.social-links .social-link {
+	padding-top:5px;
+	padding-bottom:5px;
+	width:40px;
+	padding-left:40px;
+	height:40px;
+	overflow:hidden;
+}
+
+.size-large.style-icons.social-links .social-link.social-link-phone {
+	width:auto;
+	font-size:16px;
+	line-height:28px;
+	padding-right:12px;
+}
+.size-large.style-icons.social-links .social-link.social-link-phone:before {
+	background:transparent;
+	width:40px;
+}
+
+/* LARGE TWEAKS */
+.style-icons.size-large.social-links .social-link.social-link-email:before {
+	padding-top:12px;
+}
+.style-icons.size-large.social-links .social-link.social-link-livechat:before {
+	padding-top:12px;
+}
+
+.style-icons.size-large.social-links .social-link.social-link-facebook:before {
+
+}
+.style-icons.size-large.social-links .social-link.social-link-googleplus:before {
+	padding-top:14px;
+}
+.style-icons.size-large.social-links .social-link.social-link-instagram:before {
+	padding-top:12px;
+}
+.style-icons.size-large.social-links .social-link.social-link-houzz:before {
+	padding-top:12px;
+}
+.style-icons.size-large.social-links .social-link.social-link-blogger:before {
+	padding-top:12px;
+}
+
+.style-icons.size-large.social-links .social-link.social-link-twitter:before {
+	padding-top:13px;
+}
+.style-icons.size-large.social-links .social-link.social-link-youtube:before {
+	padding-top:12px;
+}
+.style-icons.size-large.social-links .social-link.social-link-vimeo:before {
+	padding-top:12px;
+}
+.style-icons.size-large.social-links .social-link.social-link-flikr:before {
+	padding-top:12px;
+}
+.style-icons.size-large.social-links .social-link.social-link-tumblr:before {
+	padding-top:11px;
+}
+.style-icons.size-large.social-links .social-link.social-link-yelp:before {
+	padding-top:11px;
+}
+.style-icons.size-large.social-links .social-link.social-link-tripadvisor:before {
+	padding-top:11px;
+}
+.style-icons.size-large.social-links .social-link.social-link-linkedin:before {
+		padding-top:11px;
+}
+.style-icons.size-large.social-links .social-link.social-link-pinterest:before {
+		padding-top:12px;
+}
+.style-icons.size-large.social-links .social-link.social-link-phone:before {
+		padding-top:11px;
+}

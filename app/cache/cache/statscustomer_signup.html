@@ -1,0 +1,278 @@
+
+
+
+	<div class="clearfix">
+		<div id="stats" class="v2">
+			<h2 id="statsHeading"><strong>Statistics for 1<sup>st</sup> - 20<sup>th</sup> February</strong><br/>Comparisons taken from previous month</h2>
+			<div class="statsBox fullWidth">
+				<p id="hitsSparksTitle"><strong>Hits, Visitors / Day</strong></p>
+				<div id="hitsSparksFlot"><div style="width:100%;height:120px"></div></div>
+				<div id="hitsSparksFlotLegend"></div>
+			</div>
+			<div class="statsColFifth">
+				<div class="statsBox clearfix">			
+					<p id="totalHitsTitle">Total <strong>Hits</strong></p>
+					<p id="totalHits" class="statsNumbers"><span class="statNumbersLeft"><strong>180</strong><br/>0</span> <span class="statTrend ">0%</span></p>
+				</div>
+			</div>
+			<div class="statsColFifth lastIfHalf">
+				<div class="statsBox clearfix">			
+					<p id="totalVisitorsTitle">Total <strong>Visitors</strong></p>
+					<p id="totalVisitors" class="statsNumbers"><span class="statNumbersLeft"><strong>12</strong><br/>0</span> <span class="statTrend ">0%</span></p>
+				</div>
+			</div>
+			<div class="statsColFifth">
+				<div class="statsBox clearfix">			
+					<p id="totalHitsDayTitle">Avg. <strong>Hits / Day</strong></p>
+					<p id="totalHitsDay" class="statsNumbers"><span class="statNumbersLeft"><strong>9</strong><br/>0</span> <span class="statTrend ">0%</span></p>
+				</div>
+			</div>
+			<div class="statsColFifth lastIfHalf">
+				<div class="statsBox clearfix">	
+					<p id="totalVisitorsDayTitle">Avg. <strong>Visitors / Day</strong></p>
+					<p id="totalVisitorsDay" class="statsNumbers"><span class="statNumbersLeft"><strong>0.6</strong><br/>0</span> <span class="statTrend ">0%</span></p>
+				</div>
+			</div>
+			<div class="statsColFifth last">
+				<div class="statsBox clearfix">	
+					<p id="totalHitsVisitorsTitle">Hits <strong>Per Visitor</strong></p>
+					<p id="hitsPerVisitorDay" class="statsNumbers"><span class="statNumbersLeft"><strong>15</strong><br/>0</span> <span class="statTrend ">0%</span></p>								
+				</div>
+			</div>
+			<script type="text/javascript">
+			
+			$(function () {
+
+			    var thisMonthHits = {
+				    label: "Hits",
+				    data: [[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,48],[18,27],[19,76],[20,29],[21,-1],[22,-1],[23,-1],[24,-1],[25,-1],[26,-1],[27,-1],[28,-1],[29,-1],[30,-1],[31,-1]]
+					,color:"rgb(255,148,148)"
+					,shadowSize:1
+				  };
+	
+				var thisMonthVisits = {
+				    label: "Visitors",
+				    data: [[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,3],[18,2],[19,2],[20,5],[21,-1],[22,-1],[23,-1],[24,-1],[25,-1],[26,-1],[27,-1],[28,-1],[29,-1],[30,-1],[31,-1]]
+					,color:"rgb(110,209,255)"
+					,shadowSize:1
+				  };
+	
+				var lastMonthHits = {
+				    data: [[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,0],[20,0],[21,0],[22,0],[23,0],[24,0],[25,0],[26,0],[27,0],[28,0],[29,0],[30,0],[31,0]]
+					,color:"rgba(255,148,148,0.3)"
+					,shadowSize:0
+				  };
+	
+				var lastMonthVisits = {
+				    data: [[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,0],[20,0],[21,0],[22,0],[23,0],[24,0],[25,0],[26,0],[27,0],[28,0],[29,0],[30,0],[31,0]]
+					,color:"rgba(110,209,255,0.3)"
+					,shadowSize:0
+				  };
+
+			    $.plot($("#hitsSparksFlot div"), [ lastMonthVisits, lastMonthHits, thisMonthVisits, thisMonthHits ], {
+					grid: {
+					    show: true
+					    ,color: "#ABABAB"
+					    ,backgroundColor: null
+					    ,borderWidth: 0
+		
+					}
+					,yaxis: {
+					    show: true
+						,min:0
+					}
+					,xaxis: {
+					    show: true
+						,ticks:31
+						,tickDecimals:0
+					  }
+					,legend: {
+					    show: true
+					    ,noColumns: 4
+					    ,backgroundOpacity: 0
+						,container: $("#hitsSparksFlotLegend")
+					  }
+		
+				});
+			});
+			
+			</script>
+
+			<div class="clear"></div>
+			<div class="statsColQuart">
+				<div class="statsBox clearfix">
+					<p id="browserTitle">Top 5 <strong>Browsers</strong></p>
+					<div id="top5Browsers"></div>
+					<div id="top5browsersLegend"></div> <!-- end #top5browsersLegend -->
+					<script type="text/javascript">
+					var pieColour = new Array();
+					pieColour[1] = "#ffd234";
+					pieColour[2] = "#6ed1ff";
+					pieColour[3] = "#ff9494";
+					pieColour[4] = "#9fff75";
+					pieColour[5] = "#cf8bff";
+					
+					$(function () {
+
+						var top5Browsers = [
+												{ 
+						label: "Chrome"
+						, data: 164
+						,color:pieColour[1]
+						},												{ 
+						label: "Mobile Safari"
+						, data: 15
+						,color:pieColour[2]
+						},												{ 
+						label: "unknown"
+						, data: 1
+						,color:pieColour[3]
+						}						
+						  ];
+					    $.plot($("#top5Browsers"), top5Browsers, {
+							series: {
+							     pie: { 
+					                show: true
+					                ,innerRadius: 0.8
+					            }
+					        }
+						 	,legend: {
+						        show: true
+								,backgroundOpacity: 0
+								,container:$("#top5browsersLegend")
+						    }
+
+						});
+					});
+					
+					</script>
+				</div>
+			</div>
+			<div class="statsColQuart lastIfHalf">
+				<div class="statsBox clearfix">
+	
+					<p id="osTitle"><strong>Operating System</strong></p>
+					<div id="osChart"></div>
+					<div id="osChartLegend"></div> <!-- end #top5browsersLegend -->
+					<script type="text/javascript">
+					
+					$(function () {
+
+						var osChart = [
+												{ label: "Mac OS", data: 160,color:pieColour[1]},												{ label: "iPhone", data: 15,color:pieColour[2]},												{ label: "Linux", data: 2,color:pieColour[3]},												{ label: "Windows NT 4.0", data: 2,color:pieColour[4]},												{ label: "Windows 7", data: 1,color:pieColour[5]}						
+						  ];
+					    $.plot($("#osChart"), osChart, {
+							series: {
+							     pie: { 
+					                show: true
+					                ,innerRadius: 0.8
+					            }
+					        }
+						 	,legend: {
+						        show: true
+								,backgroundOpacity: 0
+								,container:$("#osChartLegend")
+						    }
+
+						});
+					});
+					
+					</script>
+
+				</div>
+			</div>
+
+			<div class="statsColQuart">
+				<div class="statsBox clearfix">
+
+					<p id="sourceTitle"><strong>Visit source</strong></p>
+						<div id="sourceChart"></div>
+						<div id="sourceChartLegend"></div>
+						<script type="text/javascript">
+						
+						$(function () {
+
+							var sourceChart = [
+														{ label: "This Site", data: 144,color:pieColour[1]},														{ label: "Direct", data: 25,color:pieColour[2]},														{ label: "Inbound Link", data: 11,color:pieColour[3]}							
+							  ];
+						    $.plot($("#sourceChart"), sourceChart, {
+								series: {
+								     pie: { 
+						                show: true
+						                ,innerRadius: 0.8
+						            }
+						        }
+							 	,legend: {
+							        show: true
+									,backgroundOpacity: 0
+									,container:$("#sourceChartLegend")
+							    }
+
+							});
+						});
+						
+						</script>
+				</div>
+			</div>
+			<div class="statsColQuart last lastIfQuart">
+				<div class="statsBox clearfix">
+					<p id="engineTitle">Top 5 <strong>Search engines</strong></p>
+					<div id="engineChart"></div>
+					<div id="engineChartLegend"></div>
+					<script type="text/javascript">
+					
+					$(function () {
+
+						var engineChart = [
+												{ label: "Google", data: 4,color:pieColour[1]}						
+						  ];
+					    $.plot($("#engineChart"), engineChart, {
+							series: {
+							     pie: { 
+					                show: true
+					                ,innerRadius: 0.8
+					            }
+					        }
+						 	,legend: {
+						        show: true
+								,backgroundOpacity: 0
+								,container:$("#engineChartLegend")
+						    }
+
+						});
+					});
+					
+					</script>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="statsColHalf">
+				<div class="statsBox clearfix">
+					<p id="topPagesTitle">Top <strong>Webpages</strong></p>
+					<div id="topPagesList">
+																		<p class=""><a href="http://www.sitebuilder.com.ng/" title="Start your free content-driven website today -"><span class="pageListNumber">131</span><span class="overflowEllipsis">Start your free content-driven website today -</span></a></p>
+																								<p class="alt"><a href="http://www.sitebuilder.com.ng/blog/test-page/?previewblog=6" title="Test Page"><span class="pageListNumber">17</span><span class="overflowEllipsis">Test Page</span></a></p>
+																								<p class=""><a href="http://www.sitebuilder.com.ng/log-in/?preview=4" title="My Sites"><span class="pageListNumber">9</span><span class="overflowEllipsis">My Sites</span></a></p>
+																								<p class="alt"><a href="http://www.sitebuilder.com.ng/choose-your-theme/" title="Themes"><span class="pageListNumber">6</span><span class="overflowEllipsis">Themes</span></a></p>
+																								<p class=""><a href="http://www.sitebuilder.com.ng/blog/?preview=7" title="There are no entries to display -"><span class="pageListNumber">5</span><span class="overflowEllipsis">There are no entries to display -</span></a></p>
+																								<p class="alt"><a href="http://www.sitebuilder.com.ng/auth/signin/" title="Error: Page Not Found -"><span class="pageListNumber">2</span><span class="overflowEllipsis">Error: Page Not Found -</span></a></p>
+																								<p class=""><a href="http://www.sitebuilder.com.ng/full-feature-list/" title="CG Design Website Management Platform Full feature List"><span class="pageListNumber">1</span><span class="overflowEllipsis">CG Design Website Management Platform Full feature List</span></a></p>
+																								<p class="alt"><a href="http://www.sitebuilder.com.ng/my-sites/?verify=e61e38bedc3c401efb24332eb483ff16" title="Thanks for verifying your email. -"><span class="pageListNumber">1</span><span class="overflowEllipsis">Thanks for verifying your email. -</span></a></p>
+																								<p class=""><a href="http://www.sitebuilder.com.ng/my-sites/" title="Features Store -"><span class="pageListNumber">1</span><span class="overflowEllipsis">Features Store -</span></a></p>
+																								<p class="alt"><a href="http://www.sitebuilder.com.ng/blog/" title="Our Blog -"><span class="pageListNumber">1</span><span class="overflowEllipsis">Our Blog -</span></a></p>
+																	</div>
+				</div>
+			</div>
+			<div class="statsColHalf last">
+				<div class="statsBox clearfix">
+	
+					<p id="topReferrersTitle">Top <strong>Referrers</strong></p>
+					<div id="topReferrersList">
+												<p class="" title="http://sitebuilder.com.ng/sh/"><a href="http://sitebuilder.com.ng/sh/" title="http://sitebuilder.com.ng/sh/"><span class="pageListNumber">4</span><span class="overflowEllipsis">http://sitebuilder.com.ng/sh/</span></a></p>
+												<p class="alt" title="http://www.google.com/search"><a href="http://www.google.com/search" title="http://www.google.com/search"><span class="pageListNumber">2</span><span class="overflowEllipsis">http://www.google.com/search</span></a></p>
+												<p class="" title="http://www.google.com/url?sa=t"><a href="http://www.google.com/url?sa=t" title="http://www.google.com/url?sa=t"><span class="pageListNumber">2</span><span class="overflowEllipsis">http://www.google.com/url?sa=t</span></a></p>
+											</div>
+				</div>
+			</div>
+		</div>
+	</div>

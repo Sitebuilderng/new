@@ -1,0 +1,30 @@
+#logos {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+#logos img {
+  height:118px;
+  opacity:0.8;
+  margin:0 30px;
+}
+@media (max-width:1024px) {
+  #logos img {
+    height:75px;
+    margin:0 10px;
+  }
+}
+
+@media (max-width:600px) {
+  #logos img {
+    height:50px;
+    margin:0 0px;
+  }
+}
+
+@media (max-width:320px) {
+  #logos img {
+    height:40px;
+    margin:0 0px;
+  }
+}

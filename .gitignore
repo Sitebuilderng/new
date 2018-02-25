@@ -1,0 +1,6 @@
+#Files to ignore
+
+sites/
+admin/
+app/configuration.php
+ss-help-videos-en

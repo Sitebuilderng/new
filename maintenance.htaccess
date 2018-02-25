@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} ^/setseed-sites
+RewriteRule ^(.*)$ /setseed-hub [R=301,L]
+RewriteCond %{REQUEST_URI} !^/cgi-bin/
+RewriteCond %{REQUEST_URI} !^/index.php
+RewriteCond %{REQUEST_URI} !^/setseed-hub
+RewriteRule $ /index.php?maintenance

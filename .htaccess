@@ -1,0 +1,77 @@
+RewriteEngine on
+RewriteBase /
+
+
+
+# Uncomment the follow two lines and replace \.dev\.example\.com with your own primary URL to prevent preview URLs being indexed by search engines
+#RewriteCond %{HTTP_HOST} ^(.*)\.dev\.example\.com$
+#RewriteRule ^robots\.txt$ /robots_dev.txt [L]
+
+# Uncomment the next three lines to force all admin pages visits to use the preview URL. This enables you to use a single wildcard SSL cert ony our primary domain to ensyre all CMS interactions are done over SSL. You can also then use host filters in Google Analytics to only track the live host so admin activity won't be tracked. Replace \.dev\.example\.com with your own primary URL.
+#RewriteCond %{HTTP_HOST} !^(.+)\.dev\.example\.com$
+#RewriteCond %{REQUEST_URI} ^/admin
+#RewriteRule ^(.*)$ http://%{HTTP_HOST}.dev.example.com/$1 [L]
+
+RewriteCond %{REQUEST_URI} ^/setseed-hub
+RewriteRule ^setseed-hub/(.*)$ sh/$1 [R=301,L] [qsa]
+RewriteCond %{REQUEST_URI} ^/admin/help-videos
+RewriteRule ^admin/help-videos-(.*)/(.*)$ /ss-help-videos-$1/$2
+RewriteCond %{HTTP_HOST} (.*)\.$
+RewriteRule (.*) http://%1/$1 [L,R=301]
+RewriteRule ^admin/livechat/(.*)$ /livechat/admin/$1
+RewriteCond %{REQUEST_URI} !^/sh/
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteCond %{REQUEST_URI} !^/images/
+RewriteRule ^([^.]*[^/])$ /$1/ [R=permanent,L]
+RewriteRule ^(.*)/page/1/$ /$1/ [R=permanent,L]
+RewriteCond %{REQUEST_URI} !^/admin/
+RewriteCond %{REQUEST_URI} !^/admin-touch/
+RewriteCond %{REQUEST_URI} !^/css/
+RewriteCond %{REQUEST_URI} !^/downloads/
+RewriteCond %{REQUEST_URI} !^/graphics/
+RewriteCond %{REQUEST_URI} !^/images/
+RewriteCond %{REQUEST_URI} !^/javascripts/
+RewriteCond %{REQUEST_URI} !^/livechat/
+RewriteCond %{REQUEST_URI} !^/media/
+RewriteCond %{REQUEST_URI} !^/install/
+RewriteCond %{REQUEST_URI} !^/ss-help-videos
+RewriteCond %{REQUEST_URI} !newsletter_remove.php
+RewriteCond %{REQUEST_URI} !ipn.php
+RewriteCond %{REQUEST_URI} !^/sh/
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteCond %{REQUEST_URI} !^/app/
+RewriteCond %{REQUEST_URI} !^/setup/
+RewriteCond %{REQUEST_URI} !phpinfo.php
+RewriteCond %{REQUEST_URI} !favicon.ico
+RewriteCond %{REQUEST_URI} !robots.txt
+RewriteCond %{REQUEST_URI} !robots_dev.txt
+RewriteCond %{REQUEST_URI} !^/asset-proxy/
+RewriteCond %{REQUEST_URI} !^/cgi-bin/
+RewriteRule ^(.*)$ app/bootstrapper.php [qsa]
+RewriteCond %{REQUEST_URI} ^/ipn.php
+RewriteRule ^(.*)$ /actions/IPN/ [R=301,L] [qsa]
+RewriteCond %{REQUEST_URI} ^/newsletter_remove.php
+RewriteRule ^(.*)$ /actions/NewsletterRemove/ [R=301,L] [qsa]
+RewriteCond %{REQUEST_URI} ^/setseed-sites
+RewriteRule ^(.*)$ /sh [R=301,L]
+RewriteRule ^css/cache-([0-9]*).css$ asset-proxy/css/all.php?version=$1
+RewriteRule ^(sh/cron/) - [F,L,NC]
+RewriteCond %{REQUEST_URI} !/css/cache-
+RewriteRule ^css/(.*)$ asset-proxy/css/serve.php?file=$1
+RewriteRule ^javascripts/cache-([0-9]*).js$ asset-proxy/javascripts/all.php?version=$1
+RewriteCond %{REQUEST_URI} !/javascripts/cache-
+RewriteRule ^javascripts/(.*)$ asset-proxy/javascripts/serve.php?file=$1
+RewriteRule ^downloads/(.*)$ /asset-proxy/downloads/serve.php?file=$1
+RewriteRule ^media/(.*)$ /asset-proxy/media/serve.php?file=$1
+RewriteRule ^graphics/(.*)$ /asset-proxy/graphics/serve.php?file=$1
+RewriteRule ^images/galleries/thumbs/(.*)$ /asset-proxy/images/galleries/thumbs/serve.php?file=$1 [qsa]
+RewriteRule ^images/galleries/(.*)$ /asset-proxy/images/galleries/serve.php?file=$1 [qsa]
+RewriteRule ^images/themegraphics/(.*)$ /asset-proxy/images/themegraphics/serve.php?file=$1 [qsa]
+RewriteRule ^images/(.*)$ /asset-proxy/images/serve.php?file=$1 [qsa]
+RewriteRule ^favicon.ico$ /asset-proxy/images/themegraphics/serve.php?file=favicon.ico [qsa]
+RewriteCond %{REQUEST_URI} ^/sh/api/
+RewriteRule . sh/api/index.php [qsa]
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule . app/api/index.php [qsa]
+RewriteCond %{QUERY_STRING} ^htaccesscheck&doublecheck$
+RewriteRule ^install/$ /install/?htaccesscheck&doublecheck&itworks2=yes&itworks=yes

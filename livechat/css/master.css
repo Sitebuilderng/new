@@ -1,0 +1,199 @@
+body {
+	padding:0;
+	margin:0;
+	font: 90% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;	
+}
+a#kill {
+	font-size:12px;
+	text-decoration:none;
+	float:left;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding:4px 15px;
+	margin:-2px 0;
+	background:#C80013;
+	color:#fff;
+
+}
+a {
+	color:#C5C8A6;
+}
+#header {
+	height:35px;
+	padding:10px 10px 0;
+	text-align:left;
+	font-size:20px;
+	line-height:20px;
+	color:#fff;
+	margin:0;
+	background:#cdcdcd;
+	position: relative;
+	z-index: 3;
+}
+.comment {
+	width:276px;
+	margin:5px auto;
+	background:url('../graphics/halfBoxTop.gif') no-repeat top;
+	padding:6px 0 0;
+}
+.comment p {
+	padding:0;
+	margin:0;
+}
+.commentInner {
+	text-align:left;
+	padding:2px 35px 9px 39px;
+	font-size:12px;
+	background:url('../graphics/halfBoxBottom.gif') bottom no-repeat;
+}
+.comment.author {
+	margin-top:4px;
+	margin-bottom:7px;
+	width:276px;
+	background:url('../graphics/commentDrkTop.gif') no-repeat top;
+}
+.comment.author p {
+	padding:0;
+	margin:0;
+}
+.author .commentInner {
+	background:url('../graphics/commentDrkBottom.gif') no-repeat bottom;
+	text-align:left;
+	padding:2px 35px 9px 39px;
+	font-size:12px;
+}
+/* */
+#user .comment {
+	background:url('../graphics/commentDrkTop.gif') no-repeat top;
+}
+#user .commentInner {
+	background:url('../graphics/commentDrkBottom.gif') no-repeat bottom;
+}
+#user .comment.author {
+	background:url('../graphics/halfBoxTop.gif') no-repeat top;
+}
+#user .author .commentInner {
+	background:url('../graphics/halfBoxBottom.gif') bottom no-repeat;
+}
+#backToLivechat {
+	margin:-2px 10px 0 0px;
+	width:29px;
+	height:29px;
+	border-radius: 5px;
+	background:#444;
+	float:left;
+	display: none;
+	cursor: pointer;
+}
+@media (max-device-width: 580px) and (max-device-height:580px) {
+	#backToLivechat {
+		display: block;
+	}
+	a#kill {
+		float:right;
+	}
+}
+@font-face {
+    font-family: 'ssicons';
+    src:url('/admin/css/icomoon-ultimate.eot');
+    src:url('/admin/css/icomoon-ultimate.eot?#iefix') format('embedded-opentype'),
+        url('/admin/css/icomoon-ultimate.woff') format('woff'),
+        url('/admin/css/icomoon-ultimate.ttf') format('truetype'),
+        url('/admin/css/icomoon-ultimate.svg#icomoon-ultimate') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+#backToLivechat:after {
+	color: #fff;
+	float:left;
+	top:10px;
+	left:15px;
+	position: absolute;
+	content:"<";
+	font-family: "ssicons";
+	font-size: 18px;
+	line-height: 25px;
+}
+.v2 #scrollwrap {
+	position: absolute;
+	left:0;
+	right:0;
+	top:45px;
+	bottom:45px;
+}
+#scroll {
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:45px;
+	top:45px;
+	overflow:auto;
+	padding-top:25px;
+	background:#fff;
+	z-index: 2;
+}
+.v2 #scroll {
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	top:auto;
+	max-height: 100%;
+	padding-top:0;
+	overflow:auto;
+	background:#fff;
+	z-index: 2;
+}
+#chat {
+	padding:0 0 15px 0;
+}
+#form {
+	padding:10px 10px 0;
+	color:#000;
+	background: #cdcdcd;
+	height:37px;
+	position: absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+.user,.rep {
+	text-align:center;
+	color:#bbb;
+	font-size:10px;
+	margin:3px 20px;
+}
+input {
+	padding:3px;
+	display:block;
+	position: absolute;
+	top:5px;
+	right:5px;
+	bottom:5px;
+	left:5px;
+}
+
+#message.loading {
+	background:#fff url('../graphics/4-0.gif') no-repeat 50% 0;
+}
+#loader {
+	vertical-align:top;
+	padding:6px 0 0;
+	margin:0 6px -16px -22px;
+}
+.rep {
+	display:none;
+}
+.alert {
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+#cookieError {
+	margin:20px;
+	border:2px dashed #FF0C00;
+	padding:10px;
+}
+#cookieError a {
+	color:#FF0C00;
+}
